@@ -10,8 +10,9 @@ if [[ -z "$BUILD_DIR" ]]; then
 fi
 
 if [[ -z "$CONFIG_FILE" ]]; then
-    CONFIG_FILE="config.live.toml"
+    CONFIG_FILE="config.toml"
 fi
+
 
 main() {
     version=$(zola --version)
@@ -21,7 +22,7 @@ main() {
     echo "Building in $BUILD_DIR directory"
     cd $BUILD_DIR
 
-    zola --config ${CONFIG_FILE} build
+    zola --config ${CONFIG_FILE} build --output-dir dist
     chmod -R 777 dist
 }
 
