@@ -34,8 +34,8 @@ jobs:
 ```
 ## Deployment
 
-### Github pages
-You can use this workflow to build then deploy your site to [Github pages](https://pages.github.com/).
+### GitHub pages
+You can use this workflow to build then deploy your site to [GitHub pages](https://pages.github.com/).
 ```yml
 # .github/workflow/main.yml
 on: 
@@ -99,7 +99,7 @@ jobs:
         env:
           CONFIG_FILE: "config.toml"
 
-      # Deploy to GitHub Pages
+      # Deploy to Cloudflare Pages
       - name: Deploy 🚀
         uses: cloudflare/pages-action@v1
         with:
